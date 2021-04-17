@@ -1,0 +1,38 @@
+mat-sidenav-container{
+    height: 100%;
+}
+mat-sidenav{
+    width: 20rem;
+    text-align: center;
+    padding: 2rem;
+    
+    
+}
+
+a{
+    color:#FF0266;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    overflow-y: scroll;
+    background: grey;
+    box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+    background: blue;
+    border-radius: 10px;
+}
+
+.pointer {cursor: pointer;}
+.zoom:hover{
+    zoom: 1.25;
+    color: #FF0266;
+}
+mat-card{
+    padding: 50px;
+
+}
+mat-toolbar{
+ justify-content: space-between;
+}

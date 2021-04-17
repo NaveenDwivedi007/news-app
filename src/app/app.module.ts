@@ -3,20 +3,37 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MaterialModule} from '../app/material/material/material.module'
 import { HttpClientModule } from '@angular/common/http';
-import { ApiService } from './service/api.service'
+import { MatButtonModule} from '@angular/material/button';
+import { MatCardModule} from '@angular/material/card';
+import { MatMenuModule} from '@angular/material/menu';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule} from '@angular/material/icon';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatBadgeModule} from '@angular/material/badge';
+
+
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     HttpClientModule,
-    ApiService,
+    MatButtonModule, 
+  MatCardModule, 
+  MatMenuModule,
+   MatToolbarModule, 
+   MatIconModule,
+   MatSidenavModule, 
+   MatListModule,
+   MatProgressSpinnerModule,
+   MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

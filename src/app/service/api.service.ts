@@ -9,4 +9,7 @@ export class ApiService {
  getCountryheadlines(country:string){
    return this.http.get("https://newsapi.org/v2/top-headlines?country="+ country+"&apiKey="+this.api_key)
  }
+ searchTopic(keyword:string){
+return this.http.get("https://newsapi.org/v2/everything?q="+keyword+"%language=en&apiKey="+this.api_key)
+ }
 }
