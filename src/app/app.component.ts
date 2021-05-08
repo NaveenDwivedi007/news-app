@@ -11,6 +11,7 @@ export class AppComponent {
   headline:{status:string,totalResults:number,articles:any}
   articles:[]
   status:boolean
+  Name:string="India";
   Country_Name:Array<string>; 
   article_Number:Number
   country:string ="in"
@@ -27,6 +28,7 @@ country_List:{}={
 Headline_of_different_country(countryName:string){
  let i =  this.Country_Name.indexOf(countryName);
  this.country=Object.keys(this.country_List)[i]
+ this.Name=countryName;
  return this.ngOnInit();
 }
 

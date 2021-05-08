@@ -13,14 +13,18 @@
                         <mat-icon>list</mat-icon>
                     </button>
                 </span>
+                <span>{{ Name }}</span>
                 <mat-icon  [matBadge]="article_Number" matBadgeColor="warn" >article</mat-icon>
             </mat-toolbar>
         </div>
         <div *ngFor="let article of articles">
             <mat-card>
                 <mat-card-header>
+                    <div class=" icon"><mat-icon>fact_check</mat-icon></div>
+                    <div >
                    <mat-card-title> {{article.author}}</mat-card-title>
                    <mat-card-subtitle>{{article.source?.name}}</mat-card-subtitle>
+                </div>
                 </mat-card-header>
                 <img mat-card-image  src="{{article.urlToImage}}" alt="Image Not Available ">
                 <mat-card-content>
