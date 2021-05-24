@@ -22,14 +22,14 @@
                 <mat-card-header>
                     <div class=" icon"><mat-icon>fact_check</mat-icon></div>
                     <div >
-                   <mat-card-title> {{article.author}}</mat-card-title>
+                   <mat-card-title class="att"> {{article.author}}</mat-card-title>
                    <mat-card-subtitle>{{article.source?.name}}</mat-card-subtitle>
                 </div>
                 </mat-card-header>
                 <img mat-card-image  src="{{article.urlToImage}}" alt="Image Not Available ">
                 <mat-card-content>
-                    <p>{{ article.description }}</p>
-                    <a href="article.url">more..</a>
+                    <h3>{{ article.description }}</h3>
+                   <h4> <a href="article.url">more..</a></h4>
                 </mat-card-content>
             </mat-card>
         </div>        
