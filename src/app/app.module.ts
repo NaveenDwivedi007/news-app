@@ -13,6 +13,9 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatBadgeModule} from '@angular/material/badge';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -33,7 +36,8 @@ import {MatBadgeModule} from '@angular/material/badge';
    MatSidenavModule, 
    MatListModule,
    MatProgressSpinnerModule,
-   MatBadgeModule
+   MatBadgeModule,
+   FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

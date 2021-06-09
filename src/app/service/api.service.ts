@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { api_key } from '../apikey'
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  api_key= api_key
+  api_key= environment.api_key
+  
   constructor( private http:HttpClient ) {}
  getCountryheadlines(country:string){
    return this.http.get("https://newsapi.org/v2/top-headlines?country="+ country+"&apiKey="+this.api_key)

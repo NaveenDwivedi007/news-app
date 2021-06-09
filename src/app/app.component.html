@@ -1,7 +1,7 @@
 
 <mat-sidenav-container>
     <mat-sidenav #sidenav>
-        <div *ngFor="let country of Country_Name">
+        <div *ngFor="let country of Country_Name" >
             <p class="pointer zoom" (click)="Headline_of_different_country(country)" style="padding: 8px; ">{{ country }}</p>
         </div>
     </mat-sidenav>
@@ -14,9 +14,24 @@
                     </button>
                 </span>
                 <span>{{ Name }}</span>
+                
+                <span class="search-bar">
+                   <span  id="search-bar"> 
+                    <input type="text" placeholder="search" [(ngModel)]="search">
+                   <button mat-button type="submit" (click)="newsSearch()">
+                    <mat-icon   class="pointer" >search</mat-icon>
+                </button >
+                   </span>
                 <mat-icon  [matBadge]="article_Number" matBadgeColor="warn" >article</mat-icon>
+            </span>
             </mat-toolbar>
         </div>
+
+        <div>
+            <ng-template #loading >
+                <mat-spinner class="spinner"></mat-spinner>
+            </ng-template>
+        <div *ngIf="status ; else loading">
         <div *ngFor="let article of articles">
             <mat-card>
                 <mat-card-header>
@@ -26,13 +41,16 @@
                    <mat-card-subtitle>{{article.source?.name}}</mat-card-subtitle>
                 </div>
                 </mat-card-header>
-                <img mat-card-image  src="{{article.urlToImage}}" alt="Image Not Available ">
+                <img mat-card-image  src="{{article.urlToImage}}" onerror="this.src='../assets/image-not-found.jpg'" alt="Image Not Available ">
                 <mat-card-content>
                     <h3>{{ article.description }}</h3>
                    <h4> <a href="article.url">more..</a></h4>
                 </mat-card-content>
             </mat-card>
-        </div>        
+        </div> 
+    </div>
+    
+    </div>       
     </mat-sidenav-content>
   </mat-sidenav-container>
 <router-outlet></router-outlet>
